@@ -24,7 +24,15 @@
 }
 
 .item7 {
-    grid-area: bajs
+    grid-area: mudcake
+}
+
+.item8 {
+    grid-area: cheese
+}
+
+.item9 {
+    grid-area: socker
 }
 
 body::-webkit-scrollbar {
@@ -42,11 +50,11 @@ body::-webkit-scrollbar-thumb {
 .grid-container {
     display: grid;
     grid-template-areas:
-    'menu header header header header header'
-    'menu main main main main main'
-    'menu mainTwo mainTwo mainTwo mainTwo mainTwo'
-    'menu mainThree mainThree mainThree mainThree mainThree'
-    'menu footer footer footer footer footer';
+    'menu header header header '
+    'menu main main mudcake '
+    'menu mainTwo mainTwo cheese '
+    'menu mainThree mainThree socker '
+    'menu footer footer footer ';
     grid-gap: 5px;
     background-color: black;
     padding: 5px;
@@ -70,6 +78,11 @@ body::-webkit-scrollbar-thumb {
 
 .alignLeft {
     text-align: left;
+}
+
+.marginPaddingAuto{
+    margin: 0;
+    padding: 0;
 }
 
 body {
