@@ -1,0 +1,15 @@
+
+
+@media screen and (min-width: 640px) and (max-width: 1024px) {
+    body{
+
+    }
+
+}
+/* Desktop */
+@media screen and (min-width: 1024px) {
+    body{
+
+    }
+
+}

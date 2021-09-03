@@ -1,0 +1,193 @@
+
+.item1 {
+    grid-area: header;
+}
+
+.item2 {
+    grid-area: menu;
+}
+
+.item3 {
+    grid-area: main;
+}
+
+.item4 {
+    grid-area: footer;
+}
+
+.item5 {
+    grid-area: mainTwo;
+}
+
+.item6 {
+    grid-area: mainThree
+}
+
+.item7 {
+    grid-area: bajs
+}
+
+body::-webkit-scrollbar {
+    width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: orange;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: beige;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'menu header header header header header'
+    'menu main main main main main'
+    'menu mainTwo mainTwo mainTwo mainTwo mainTwo'
+    'menu mainThree mainThree mainThree mainThree mainThree'
+    'menu footer footer footer footer footer';
+    grid-gap: 5px;
+    background-color: black;
+    padding: 5px;
+}
+
+.grid-container > div {
+    text-align: center;
+    padding: 10px 5px;
+    font-size: 20px;
+    background: beige;
+}
+
+
+.alignCenter {
+    text-align: center;
+}
+
+.alignRight {
+    text-align: right;
+}
+
+.alignLeft {
+    text-align: left;
+}
+
+body {
+    background: orange;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+}
+
+.subPageBody{
+    background: beige;
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+}
+
+.lobsterFont {
+    font-family: Lobster, sans-serif;
+}
+
+.latoFont {
+    font-family: Lato, sans-serif;
+}
+
+.titleSizeAndFont {
+    font-family: Lobster, sans-serif;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.subTitleSizeAndFont {
+    font-family: Lato, sans-serif;
+    font-size: 25px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+form {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+select {
+    width: 50px;
+    height: 25px;
+    margin: 0 auto;
+}
+
+.containerImage {
+    width: 50%;
+    height: auto;
+}
+
+.containerImageFrontPage {
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+.formatTextToImage{
+    text-align: right;
+    margin-right: 500px;
+    border: 10px;
+}
+
+iframe {
+    border: none;
+
+}
+
+.textArea {
+    height: 200px;
+    width: 200px;
+    resize: none;
+
+}
+
+.textSizePaddingAndMarginForm {
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 18px;
+
+}
+
+table {
+    border: 2px solid black;
+    width: 100%;
+}
+
+.radioButtonInline {
+
+}
+
+li {
+    margin: 5px;
+}
+
+.submitButton {
+    width: 100px;
+    height: 30px;
+    font-size: 15px;
+}
+
+a:link {
+    color: green;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: blue;
+}
+
+
+
