@@ -2,14 +2,14 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Lobster">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/mediaquery.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="UTF-8">
     <title>Recipes</title>
 
@@ -17,9 +17,6 @@
 </head>
 
 <body>
-
-<nav class="navbar"></nav>
-
 
 <div class="grid-container">
     <div class="item1">
@@ -29,17 +26,21 @@
     <div class="item2">
 
         <p class="lobsterFont">Quick Navigation</p>
-        <a href="mudcake.html"> Mud Cake </a><br>
+        <a href="mudcake.html" style="text-decoration: none"> Mud Cake </a><br>
         <br>
-        <a href="sockerkaka.html"> Swedish Sockerkaka </a><br>
+        <a href="sockerkaka.html" style="text-decoration: none"> Swedish Sockerkaka </a><br>
         <br>
-        <a href="cheesecake.html"> Strawberry Cheesecake </a><br>
-        <br>
-
-        <a href="form.html"> Add new Recipe</a><br>
+        <a href="cheesecake.html" style="text-decoration: none"> Strawberry Cheesecake </a><br>
         <br>
 
-        <a href="gaius.html">ガイアス様</a>
+        <a href="form.html" style="text-decoration: none"> Add new Recipe</a><br>
+        <br>
+
+        <a href="gaius.html" style="text-decoration: none">ガイアス様</a><br>
+        <br>
+
+        <a href="login.html" id="bottomCenterFormatText" style="text-decoration: none"> Log Out</a><br>
+        <br>
 
     </div>
 
@@ -55,20 +56,20 @@
                 <th>Difficulty</th>
             </tr>
             <tr>
-                <td><a href="cheesecake.html">Strawberry Cheesecake</a></td>
+                <td><a href="cheesecake.html" style="text-decoration: none">Strawberry Cheesecake</a></td>
                 <td>30min</td>
                 <td>8</td>
                 <td>Intermediate</td>
             </tr>
             <tr>
-                <td><a href="mudcake.html">Australian Mud Cake</a></td>
+                <td><a href="mudcake.html" style="text-decoration: none">Australian Mud Cake</a></td>
                 <td>2h</td>
                 <td>8</td>
                 <td>Easy</td>
             </tr>
 
             <tr>
-                <td><a href="sockerkaka.html">Swedish Sockerkaka</a></td>
+                <td><a href="sockerkaka.html" style="text-decoration: none">Swedish Sockerkaka</a></td>
                 <td>45min</td>
                 <td>8</td>
                 <td>Easy</td>
@@ -78,17 +79,17 @@
     </div>
 
     <div class="item3  marginPaddingAuto">
-        <a href="mudcake.html"><img src="img/mudcakefrontpage.jpg" style="height: 200px" alt=""></a>
+        <a href="mudcake.html"><img alt="" src="img/mudcakefrontpage.jpg" style="height: 200px"></a>
 
     </div>
 
     <div class="item5 marginPaddingAuto">
-        <a class="formatImageLeft" href="cheesecake.html"><img src="img/cheesecake.jpg" style="height: 200px" alt="">
+        <a class="formatImageLeft" href="cheesecake.html"><img alt="" src="img/cheesecake.jpg" style="height: 200px">
         </a>
     </div>
 
     <div class="item6 marginPaddingAuto">
-        <a href="sockerkaka.html"><img src="img/sockerkakaFRONT.jpg" style="height: auto" width="300" alt=""> </a>
+        <a href="sockerkaka.html"><img alt="" src="img/sockerkakaFRONT.jpg" style="height: auto" width="300"> </a>
     </div>
 
     <div class="item7 alignLeft">
@@ -110,76 +111,5 @@
 
 </div>
 </body>
-
-<!---
-
-<body>
-
-<h1 class="alignCenter lobsterFont titleSizeAndFont">Recipe List</h1>
-
-
-<div>
-
-    <ul class="lobsterFont">
-        <li>
-            <a href="mudcake.html"> Mud Cake </a>
-            <br>
-            <img class="containerImageFrontPage" src="img/mudcakefrontpage.jpg" alt="">
-        </li>
-
-        <li>
-            <a href="sockerkaka.html"> Swedish Sockerkaka </a>(In Swedish)
-            <br>
-            <img class="containerImageFrontPage" src="img/sockerkakaFRONT.jpg" alt="">
-        </li>
-
-        <li>
-            <a href="cheesecake.html"> Strawberry Cheesecake </a>
-            <br>
-            <img class="containerImageFrontPage" src="img/cheesecake.jpg" alt="">
-        </li>
-    </ul>
-
-</div>
-
-
-<h2 class="alignCenter lobsterFont titleSizeAndFont">Pastry Overview</h2>
-
-<table class="subTitleSizeAndFont">
-    <tr>
-        <th>Cakes</th>
-        <th>Time</th>
-        <th>Servings</th>
-        <th>Difficulty</th>
-    </tr>
-    <tr>
-        <td><a href="cheesecake.html">Strawberry Cheesecake</a></td>
-        <td>30min</td>
-        <td>8</td>
-        <td>Intermediate</td>
-    </tr>
-    <tr>
-        <td><a href="mudcake.html">Australian Mud Cake</a></td>
-        <td>2h</td>
-        <td>8</td>
-        <td>Easy</td>
-    </tr>
-
-    <tr>
-        <td><a href="sockerkaka.html">Swedish Sockerkaka</a></td>
-        <td>45min</td>
-        <td>8</td>
-        <td>Easy</td>
-    </tr>
-</table>
-<br>
-<p>
-    <a href="form.html">Click Here To Add Additional Recipes</a>
-</p>
-
-
-</body>
-
---->
 
 </html>

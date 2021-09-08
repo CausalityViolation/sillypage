@@ -1,74 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="UTF-8">
     <title>Add Recipe</title>
-    <link rel="stylesheet" type="text/css" href="css/style.css">
-    <link rel="stylesheet" type="text/css" href="css/mediaquery.css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
 </head>
 <body class="subPageBody">
 
 <p class="subTitleSizeAndFont">Please Enter The Recipe Information In The Form Below:</p><br>
 
-<form class="containerImageFrontPage" >
+<form class="containerImageFrontPage" id="formReg">
 
     <label class="textSizePaddingAndMarginForm" for="RecipeName">Recipe Name:</label><br>
-    <input type="text" required="required" id="RecipeName" name="RecipeName"><br>
+    <input id="RecipeName" name="RecipeName" required="required" type="text"><br>
     <br>
 
     <label class="textSizePaddingAndMarginForm" for="Ingredients">Ingredients:</label><br>
-    <textarea class="textArea" id="Ingredients" required="required" name="Ingredients"></textarea><br>
+    <textarea class="textArea" id="Ingredients" name="Ingredients" required="required"></textarea><br>
     <br>
 
     <label class="textSizePaddingAndMarginForm" for="Method">Method:</label><br>
-    <textarea class="textArea" id="Method" required="required" name="Method"></textarea><br>
+    <textarea class="textArea" id="Method" name="Method" required="required"></textarea><br>
 
     <p class="textSizePaddingAndMarginForm">Servings:</p>
     <select id="servings">
-        <option value="1"> 1 </option>
-        <option value="1"> 2 </option>
-        <option value="1"> 3 </option>
-        <option value="1"> 4 </option>
-        <option value="1"> 5 </option>
-        <option value="1"> 6 </option>
-        <option value="1"> 7 </option>
-        <option value="1"> 8 </option>
+        <option value="1"> 1</option>
+        <option value="1"> 2</option>
+        <option value="1"> 3</option>
+        <option value="1"> 4</option>
+        <option value="1"> 5</option>
+        <option value="1"> 6</option>
+        <option value="1"> 7</option>
+        <option value="1"> 8</option>
     </select>
     <label for="servings"></label><br>
     <br>
 
     <p class="textSizePaddingAndMarginForm">Difficulty:</p>
-    <input type="radio" id="easy" required="required" name="difficulty" value="easy">
-    <label for="easy">Easy</label>
-
-    <input type="radio" id="intermediate" required="required" name="difficulty" value="intermediate">
-    <label for="intermediate">Intermediate</label>
-
-    <input type="radio" id="hard" required="required" name="difficulty" value="hard">
-    <label for="hard">Hard</label><br>
+    <label for="difficulty"></label>
+    <select class="selectButton" id="difficulty">
+        <option value="1"> Easy</option>
+        <option value="1"> Intermediate</option>
+        <option value="1"> Hard</option>
+    </select>
+    <label for="servings"></label><br>
     <br>
 
     <p class="textSizePaddingAndMarginForm">Time:</p>
-    <input type="radio" id="30min" name="time" required="required" value="30min">30min
-    <label for="30min"></label>
-
-    <input type="radio" id="45min" name="time" required="required" value="45min">45min
-    <label for="45min"></label>
-
-    <input type="radio" id="1h" name="time" required="required" value="1h">1h
-    <label for="1h"></label>
-
-    <input type="radio" id=">1h" name="time" required="required" value=">1h">>1h<br>
-    <label for=">1h"></label><br>
+    <label for="time"></label>
+    <select class="selectButton" id="time">
+        <option value="1"> <30min</option>
+        <option value="1"> 30min</option>
+        <option value="1"> 45min</option>
+        <option value="1"> 1hour</option>
+        <option value="1"> >1hour</option>
+    </select>
+    <label for="servings"></label><br>
+    <br>
 
     <input class="submitButton" type="submit" value="Add Recipe">
 </form>
 
+<p id="output"></p>
+
 <br>
 <p class="whiteTextColor">Click
-    <a style="font-family: Lobster, sans-serif" href="index.html"> HERE
-    </a> to navigate back to recipes
+    <a href="index.html" style="font-family: Lobster, sans-serif"> HERE
+    </a> to navigate back to recipes</p>
+
+<script src="js/form.js"></script>
 
 </body>
 </html>

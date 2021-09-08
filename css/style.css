@@ -80,7 +80,7 @@ body::-webkit-scrollbar-thumb {
     text-align: left;
 }
 
-.marginPaddingAuto{
+.marginPaddingAuto {
     margin: 0;
     padding: 0;
 }
@@ -91,7 +91,7 @@ body {
     font-size: 15px;
 }
 
-.subPageBody{
+.subPageBody {
     background: beige;
     font-family: Lato, sans-serif;
     font-size: 15px;
@@ -142,7 +142,7 @@ select {
     margin: 10px;
 }
 
-.formatTextToImage{
+.formatTextToImage {
     text-align: right;
     margin-right: 500px;
     border: 10px;
@@ -172,18 +172,21 @@ table {
     width: 100%;
 }
 
-.radioButtonInline {
-
-}
-
 li {
     margin: 5px;
 }
 
 .submitButton {
-    width: 100px;
+    width: auto;
     height: 30px;
     font-size: 15px;
+}
+
+.selectButton {
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+
 }
 
 a:link {
@@ -200,6 +203,31 @@ a:hover {
 
 a:active {
     color: blue;
+}
+
+#feedback, #termsHint {
+    color: #fff;
+    background-image: url('../img/warning.png');
+    background-repeat: no-repeat;
+    background-position: 2px 14px;
+    padding: 10px 0 0 22px;
+}
+
+#feedback.warning {
+    background-image: url('../img/warning.png');
+}
+
+#feedback.tip {
+    background-image: url('../img/tip.png');
+}
+
+#bottomCenterFormatText {
+
+    font-family: Lato, sans-serif;
+    font-size: x-large;
+    position: absolute;
+    bottom: -70px;
+    left: 70px;
 }
 
 
