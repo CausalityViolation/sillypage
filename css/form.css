@@ -1,0 +1,197 @@
+body {
+    background-image: url("../img/background1.jpg");
+    background-size: 640px 620px;
+    background-color: #1A4645;
+    font-family: 'Lobster', 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: black;
+    text-shadow: 2px -1px 1px rgba(255, 255, 255, 1);
+
+}
+
+#page {
+    background-color: #051821;
+    height: auto;
+    width: auto;
+    margin: 0 auto 0 auto;
+    border-radius: 15px 50px 30px;
+}
+
+h1 {
+    background-image: url("../img/modernCake.png");
+    background-size: 100px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    text-align: center;
+    height: 60px;
+    line-height: 50px;
+    width: auto;
+    margin: 0 auto 0 auto;
+    padding: 50px 10px 30px 10px;
+}
+
+
+form {
+    padding: 0 60px 65px 60px;
+}
+
+label {
+    color: #fff;
+    display: block;
+    margin: 10px 0 10px 0;
+    font-size: 24px;
+}
+
+textarea {
+    width: 96%;
+    height: 5em;
+    line-height: 1.4em;
+}
+
+select, option {
+    font-size: 16px;
+}
+
+.orderStyle {
+    max-width: 500px;
+    padding: 20px 12px 10px 20px;
+    font: 13px Arial, Helvetica, sans-serif;
+}
+
+.orderHeader {
+    font-weight: bold;
+    font-style: italic;
+    border-bottom: 2px solid #ddd;
+    margin-bottom: 20px;
+    font-size: 15px;
+    padding-bottom: 3px;
+}
+
+.orderStyle label {
+    display: block;
+    margin: 0 0 15px 0;
+}
+
+.orderStyle label > span {
+    width: 100px;
+    font-weight: bold;
+    float: left;
+    padding-top: 8px;
+    padding-right: 5px;
+}
+
+.orderStyle span.required {
+    color: red;
+}
+
+.orderStyle .tel-number-field {
+    width: 40px;
+    text-align: center;
+}
+
+.orderStyle input.input-field, .orderStyle .select-field {
+    width: 48%;
+}
+
+.orderStyle input.input-field,
+.orderStyle .tel-number-field,
+.orderStyle .textarea-field,
+.orderStyle .select-field {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    border: 1px solid #C2C2C2;
+    box-shadow: 1px 1px 4px #EBEBEB;
+    -moz-box-shadow: 1px 1px 4px #EBEBEB;
+    -webkit-box-shadow: 1px 1px 4px #EBEBEB;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    padding: 7px;
+    outline: none;
+}
+
+.orderStyle .input-field:focus,
+.orderStyle .tel-number-field:focus,
+.orderStyle .textarea-field:focus,
+.orderStyle .select-field:focus {
+    border: 1px solid #0C0;
+}
+
+.orderStyle .textarea-field {
+    height: 100px;
+    width: 55%;
+}
+
+.orderStyle input[type=submit],
+.orderStyle input[type=button] {
+    border: none;
+    padding: 8px 15px 8px 15px;
+    margin-bottom: 8px;
+    background: #FF8500;
+    color: #fff;
+    box-shadow: 1px 1px 4px #DADADA;
+    -moz-box-shadow: 1px 1px 4px #DADADA;
+    -webkit-box-shadow: 1px 1px 4px #DADADA;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+
+.orderStyle input[type=submit]:hover,
+.orderStyle input[type=button]:hover {
+    background: #EA7B00;
+    color: #fff;
+}
+
+html {
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    background: #051821 url(../img/formBackground.jpg) no-repeat center center fixed;
+}
+
+select {
+
+    width: auto;
+    height: 25px;
+    border-radius: 5px;
+
+}
+
+@media only screen and (max-width: 500px) {
+    body {
+        background-color: #403c3b;
+    }
+
+    #page {
+        max-width: 480px;
+    }
+}
+
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+    #page {
+        max-width: 480px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 959px) {
+    #page {
+        max-width: 480px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+/* Larger screens act like a demo for the app */
+@media only screen and (min-width: 960px) {
+    #page {
+        max-width: 480px;
+        margin: 20px auto 20px auto;
+    }
+}
+
+
+

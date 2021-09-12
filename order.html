@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta charset="UTF-8">
+    <title>Add Recipe</title>
+    <link href="css/form.css" rel="stylesheet" type="text/css">
+    <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
+</head>
+
+
+
+<body class="orderStyle" id="page">
+
+<h1>Enter Your Order Details:</h1><br>
+
+<form class="orderHeader">
+
+    <p>Pastry:</p>
+    <label for="pastry"></label>
+    <select id="pastry">
+        <option value="250"> Strawberry Cheesecake (250kr)</option>
+        <option value="150"> Swedish Sockerkaka (150kr)</option>
+        <option value="300"> Australian Mud Cake (300kr)</option>
+    </select><br>
+    <br>
+
+    <p>Amount:</p>
+    <select id="amount">
+        <option value="1"> 1</option>
+        <option value="2"> 2</option>
+        <option value="3"> 3</option>
+        <option value="4"> 4</option>
+        <option value="5"> 5</option>
+    </select>
+    <label for="amount"></label><br>
+    <br>
+
+    <p class="textSizePaddingAndMarginForm">Delivery Method:</p>
+    <label for="delivery"></label>
+    <select class="selectButton" id="delivery">
+        <option value="0"> Pickup At Store (Free)</option>
+        <option value="150"> Home Delivery (150kr)</option>
+    </select><br>
+    <br>
+
+    <input class="submitButton" id="submitOrder" type="submit" value="Place Order">
+</form>
+
+<p id="confirmOrder"></p>
+
+
+<br>
+<p class="whiteTextColor">Click
+    <a href="index.html" style="text-decoration: none"> HERE
+    </a> to navigate back to recipes</p>
+
+<script src="js/order.js"></script>
+
+</body>
+
+</html>
