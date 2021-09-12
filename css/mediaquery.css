@@ -1,14 +1,128 @@
-@media screen and (min-width: 640px) and (max-width: 1024px) {
-    body {
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .logo {
+        color: red;
+        font-size: 20px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav ol {
+        display: flex;
+        list-style: none;
 
     }
 
+    .nav ol li {
+        margin: 1em
+    }
+
+
+    body {
+        font-size: 12px;
+    }
+
+
+    .grid-container > div {
+
+        font-size: 15px;
+        text-align: left;
+
+    }
+
+    .grid-container > header {
+
+        font-size: 15px;
+
+
+    }
+
+    .grid-container > article {
+
+        font-size: 15px;
+
+    }
+
+    header {
+
+        height: 50%;
+
+    }
+
+    .subTitleSizeAndFont {
+        font-size: 15px;
+    }
 }
 
-/* Desktop */
-@media screen and (min-width: 1024px) {
-    body {
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 481px) {
+
+    .logo {
+        color: blue;
+        font-size: 20px;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav ol {
+        display: flex;
+        list-style: none;
 
     }
+
+    .nav ol li {
+        margin: 1em
+    }
+
+
+    body {
+        font-size: 12px;
+    }
+
+
+    .grid-container > div {
+
+        font-size: 15px;
+        text-align: left;
+
+    }
+
+    .grid-container > header {
+
+        font-size: 15px;
+
+
+    }
+
+    .grid-container > article {
+
+        font-size: 15px;
+
+    }
+
+    header {
+
+        height: 50%;
+
+    }
+
+    .subTitleSizeAndFont {
+        font-size: 15px;
+    }
+
 
 }

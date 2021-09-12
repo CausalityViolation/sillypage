@@ -2,7 +2,8 @@
 header {
     width: 100%;
     height: 50px;
-    background: beige;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     display: block;
     justify-content: space-around;
     align-items: center;
@@ -28,9 +29,6 @@ header {
     margin: 1em
 }
 
-#menu li { padding: 0; }
-#menu li a { margin: 0; display: block; width: 100%; height: 100%; }
-
 
 .item1 {
     grid-area: header;
@@ -42,6 +40,10 @@ header {
 
 .item3 {
     grid-area: main;
+    grid-template-columns: 50px 50px 50px 50px;
+    border: 1px solid black;
+    grid-gap: 1px;
+    background-color: black;
 }
 
 .item4 {
@@ -50,22 +52,43 @@ header {
 
 .item5 {
     grid-area: mainTwo;
+    grid-template-columns: 50px 50px 50px 50px;
+    border: 1px solid black;
+    grid-gap: 1px;
+    background-color: black;
 }
 
 .item6 {
-    grid-area: mainThree
+    grid-area: mainThree;
+    grid-template-columns: 50px 50px 50px 50px;
+    border: 1px solid black;
+    grid-gap: 1px;
+    background-color: black;
 }
 
 .item7 {
-    grid-area: mudcake
+    grid-area: mudcake;
+    grid-template-columns: 50px 50px 50px 50px;
+    border: 1px solid black;
+    grid-gap: 1px;
+    background-color: black;
 }
 
 .item8 {
-    grid-area: cheese
+    grid-area: cheese;
+    grid-template-columns: 50px 50px 50px 50px;
+    border: 1px solid black;
+    grid-gap: 1px;
+    background-color: black;
+
 }
 
 .item9 {
-    grid-area: socker
+    grid-area: socker;
+    grid-template-columns: 50px 50px 50px 50px;
+    border: 1px solid black;
+    grid-gap: 1px;
+    background-color: black;
 }
 
 body::-webkit-scrollbar {
@@ -77,7 +100,8 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-    background: beige;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .grid-container {
@@ -88,30 +112,31 @@ body::-webkit-scrollbar-thumb {
     'mainTwo mainTwo cheese '
     'mainThree mainThree socker '
     'footer footer footer ';
-    grid-gap: 5px;
     background-color: #051821;
-    padding: 5px;
+    padding: 0.1rem;
 }
 
 .grid-container > div {
     text-align: center;
-    padding: 10px 5px;
     font-size: 20px;
-    background: beige;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .grid-container > header {
     text-align: center;
     padding: 10px 5px;
     font-size: 20px;
-    background: beige;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 .grid-container > article {
     text-align: center;
     padding: 10px 5px;
     font-size: 20px;
-    background: beige;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
 
@@ -140,7 +165,8 @@ body {
 
 
 .subPageBody {
-    background: beige;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     font-family: Lato, sans-serif;
     font-size: 15px;
 }
@@ -278,6 +304,3 @@ a:active {
     bottom: 0;
     left: 7rem;
 }
-
-
-
