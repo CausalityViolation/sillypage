@@ -1,13 +1,27 @@
 
 header {
     width: 100%;
-    height: 50px;
+    height: max-content;
     background-color: #b8c6db;
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     display: block;
     justify-content: space-around;
     align-items: center;
+
 }
+
+#underMenu{
+
+    width: 100%;
+    height: max-content;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
 
 .logo {
     color: black;
@@ -17,6 +31,7 @@ header {
 .nav {
     display: flex;
     align-items: center;
+
 }
 
 .nav ol {
@@ -91,6 +106,10 @@ header {
     background-color: black;
 }
 
+.item10 {
+    grid-area: underMenu;
+}
+
 body::-webkit-scrollbar {
     width: 0.4rem;
 }
@@ -111,9 +130,11 @@ body::-webkit-scrollbar-thumb {
     'main main mudcake '
     'mainTwo mainTwo cheese '
     'mainThree mainThree socker '
-    'footer footer footer ';
+    'footer footer footer '
+    'underMenu underMenu underMenu';
     background-color: #051821;
     padding: 0.1rem;
+
 }
 
 .grid-container > div {
@@ -160,7 +181,7 @@ body::-webkit-scrollbar-thumb {
 body {
     background: #051821;
     font-family: Lato, sans-serif;
-    font-size: 15px;
+    font-size: 18px;
 }
 
 
@@ -169,6 +190,7 @@ body {
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     font-family: Lato, sans-serif;
     font-size: 15px;
+    height: 0;
 }
 
 .lobsterFont {
@@ -245,6 +267,7 @@ table {
     border: 2px solid black;
     border-radius: 0.8rem;
     width: 100%;
+    height: auto;
 }
 
 li {

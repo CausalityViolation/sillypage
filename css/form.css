@@ -12,7 +12,7 @@ body {
 
 #page {
     background-color: #051821;
-    height: auto;
+    height: 50rem;
     width: auto;
     margin: 0 auto 0 auto;
     border-radius: 15px 50px 30px;
@@ -81,10 +81,6 @@ select, option {
     padding-right: 5px;
 }
 
-.orderStyle span.required {
-    color: red;
-}
-
 .orderStyle .tel-number-field {
     width: 40px;
     text-align: center;
@@ -129,8 +125,8 @@ select, option {
     border: none;
     padding: 8px 15px 8px 15px;
     margin-bottom: 8px;
-    background: #FF8500;
-    color: #fff;
+    background-image: linear-gradient(5deg, #b8c6db 50%, #f5f7fa 74%);
+    color: black;
     box-shadow: 1px 1px 4px #DADADA;
     -moz-box-shadow: 1px 1px 4px #DADADA;
     -webkit-box-shadow: 1px 1px 4px #DADADA;
@@ -141,8 +137,8 @@ select, option {
 
 .orderStyle input[type=submit]:hover,
 .orderStyle input[type=button]:hover {
-    background: #EA7B00;
-    color: #fff;
+    background: #f5f7fa;
+    color: black;
 }
 
 html {
@@ -150,7 +146,11 @@ html {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background: #051821 url(../img/formBackground.jpg) no-repeat center center fixed;
+    background: #051821 no-repeat center center fixed;
+    background-image: linear-gradient(5deg, #b8c6db 50%, #f5f7fa 74%);
+
+
+
 }
 
 select {
@@ -159,6 +159,11 @@ select {
     height: 25px;
     border-radius: 5px;
 
+}
+
+.textColorAndSize{
+    font-size: 20px;
+    text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {

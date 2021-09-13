@@ -25,7 +25,7 @@ document.getElementById("submitOrder").onclick = function placeOrder() {
     console.log(storedOrders)
 
     orderConfirmed.setAttribute('style', 'white-space: pre;');
-    orderConfirmed.textContent = "Order Successfully Placed!" + " Your Order Total is : " + orderSum + "kr" +
+    orderConfirmed.textContent = "Order Successfully Placed!" + "\r\n" + " Your Order Total is : " + orderSum + "kr" +
         "\r\n\r\n" + "Your Order Details: " + "\r\n" + convertToString(placedOrder);
 
 
@@ -36,6 +36,10 @@ document.getElementById("submitOrder").onclick = function placeOrder() {
 function convertToString(placedOrder) {
 
     let stringObject = JSON.stringify(placedOrder).replaceAll(/['"{}]/g, '');
+    document.getElementById("confirmOrder").style.fontSize = "130%";
+    document.getElementById("confirmOrder").style.background = "white";
+    document.getElementById("confirmOrder").style.borderRadius = "3px";
+    document.getElementById("confirmOrder").style.border = "thin solid black";
     return stringObject.replaceAll(/,/g, "\r\n").replaceAll(/:/g, ": ");
 }
 

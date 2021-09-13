@@ -1,3 +1,4 @@
+
 /*
   ##Device = Low Resolution Tablets, Mobiles (Landscape)
   ##Screen = B/w 481px to 767px
@@ -10,12 +11,12 @@
     }
 
     .nav {
-        display: flex;
+
         align-items: center;
     }
 
     .nav ol {
-        display: flex;
+
         list-style: none;
 
     }
@@ -50,17 +51,11 @@
 
     }
 
-    header {
-
-        height: 50%;
-
-    }
-
     .subTitleSizeAndFont {
         font-size: 15px;
     }
 
-    iframe{
+    iframe {
         width: 100%;
         margin: 0 auto;
     }
@@ -71,7 +66,7 @@
   ##Screen = B/w 320px to 479px
 */
 
-@media (min-width: 320px) and (max-width: 481px) {
+@media (min-width: 320px) and (max-width: 480px) {
 
     .logo {
         color: blue;
