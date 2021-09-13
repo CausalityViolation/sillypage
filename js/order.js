@@ -17,15 +17,10 @@ document.getElementById("submitOrder").onclick = function placeOrder() {
     };
 
     orders.push(placedOrder);
-
-    localStorage.setItem("orders", JSON.stringify(orders));
-    let storedOrders = JSON.parse(localStorage.getItem("orders"));
-
-    //Kontrollerar i konsollen
-    console.log(storedOrders)
+    storeInStorage(orders);
 
     orderConfirmed.setAttribute('style', 'white-space: pre;');
-    orderConfirmed.textContent = "Order Successfully Placed!" + "\r\n" + " Your Order Total is : " + orderSum + "kr" +
+    orderConfirmed.textContent = "Order Successfully Placed!" + "\r\n" + "Your Order Total is : " + orderSum + "kr" +
         "\r\n\r\n" + "Your Order Details: " + "\r\n" + convertToString(placedOrder);
 
 
@@ -41,6 +36,16 @@ function convertToString(placedOrder) {
     document.getElementById("confirmOrder").style.borderRadius = "3px";
     document.getElementById("confirmOrder").style.border = "thin solid black";
     return stringObject.replaceAll(/,/g, "\r\n").replaceAll(/:/g, ": ");
+}
+
+function storeInStorage(orders) {
+
+    localStorage.setItem("orders", JSON.stringify(orders));
+    let storedOrders = JSON.parse(localStorage.getItem("orders"));
+
+    //Kontrollerar i konsollen
+    console.log(storedOrders)
+
 }
 
 
