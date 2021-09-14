@@ -4,7 +4,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta charset="UTF-8">
     <title>Add Recipe</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/formGrid.css" rel="stylesheet" type="text/css">
     <link href="css/mediaquery.css" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 </head>
@@ -23,70 +23,86 @@
 
 </header>
 
-<br><br>
-<p class="subTitleSizeAndFont">Please Enter The Recipe Information In The Form Below:</p><br>
+<div class="grid-container">
 
-<form class="containerImageFrontPage" id="formReg">
+    <article class="item1">
+        <p>Enter The Recipe Information In The Form Below:</p><br>
 
-    <label class="textSizePaddingAndMarginForm" for="RecipeName">Recipe Name:</label><br>
-    <input id="RecipeName" name="RecipeName" required="required" type="text"><br>
-    <br>
+        <form class="containerImageFrontPage" id="formReg">
 
-    <label class="textSizePaddingAndMarginForm" for="Ingredients">Ingredients:</label><br>
-    <textarea class="textArea" id="Ingredients" name="Ingredients" required="required"></textarea><br>
-    <br>
+            <label class="textSizePaddingAndMarginForm" for="RecipeName">Recipe Name:</label><br>
+            <input id="RecipeName" name="RecipeName" required="required" type="text"><br>
+            <br>
 
-    <label class="textSizePaddingAndMarginForm" for="Method">Method:</label><br>
-    <textarea class="textArea" id="Method" name="Method" required="required"></textarea><br>
+            <label class="textSizePaddingAndMarginForm" for="Ingredients">Ingredients:</label><br>
+            <textarea class="textArea" id="Ingredients" name="Ingredients" required="required"></textarea><br>
+            <br>
 
-    <p class="textSizePaddingAndMarginForm">Servings:</p>
-    <select id="servings">
-        <option value="1"> 1</option>
-        <option value="1"> 2</option>
-        <option value="1"> 3</option>
-        <option value="1"> 4</option>
-        <option value="1"> 5</option>
-        <option value="1"> 6</option>
-        <option value="1"> 7</option>
-        <option value="1"> 8</option>
-    </select>
-    <label for="servings"></label><br>
-    <br>
+            <label class="textSizePaddingAndMarginForm" for="Method">Method:</label><br>
+            <textarea class="textArea" id="Method" name="Method" required="required"></textarea><br>
 
-    <p class="textSizePaddingAndMarginForm">Difficulty:</p>
-    <label for="difficulty"></label>
-    <select class="selectButton" id="difficulty">
-        <option value="1"> Easy</option>
-        <option value="1"> Intermediate</option>
-        <option value="1"> Hard</option>
-    </select>
-    <label for="servings"></label><br>
-    <br>
+            <p class="textSizePaddingAndMarginForm">Servings:</p>
+            <select id="servings">
+                <option value="1"> 1</option>
+                <option value="1"> 2</option>
+                <option value="1"> 3</option>
+                <option value="1"> 4</option>
+                <option value="1"> 5</option>
+                <option value="1"> 6</option>
+                <option value="1"> 7</option>
+                <option value="1"> 8</option>
+            </select>
+            <label for="servings"></label><br>
+            <br>
 
-    <p class="textSizePaddingAndMarginForm">Time:</p>
-    <label for="time"></label>
-    <select class="selectButton" id="time">
-        <option value="1"> <30min</option>
-        <option value="1"> 30min</option>
-        <option value="1"> 45min</option>
-        <option value="1"> 1hour</option>
-        <option value="1"> >1hour</option>
-    </select>
-    <label for="servings"></label><br>
-    <br>
+            <p class="textSizePaddingAndMarginForm">Difficulty:</p>
+            <label for="difficulty"></label>
+            <select class="selectButton" id="difficulty">
+                <option value="1"> Easy</option>
+                <option value="1"> Intermediate</option>
+                <option value="1"> Hard</option>
+            </select>
+            <label for="servings"></label><br>
+            <br>
 
-    <input class="submitButton" type="submit" value="Add Recipe">
-</form>
+            <p class="textSizePaddingAndMarginForm">Time:</p>
+            <label for="time"></label>
+            <select class="selectButton" id="time">
+                <option value="1"> <30min</option>
+                <option value="1"> 30min</option>
+                <option value="1"> 45min</option>
+                <option value="1"> 1hour</option>
+                <option value="1"> >1hour</option>
+            </select>
+            <label for="servings"></label><br>
+            <br>
 
-<p id="output"></p>
+            <input class="submitButton" type="submit" value="Add Recipe">
+        </form>
 
-<br>
+        <p id="output"></p>
 
-<p class="whiteTextColor">Click
-    <a href="index.html" style="font-family: Lobster, sans-serif"> HERE
-    </a> to navigate back to recipes</p>
+        <br>
 
-<script src="js/form.js"></script>
+    </article>
+
+    <article class="item2">
+
+        <p>Press this button to display the top 3 recipes</p>
+        <input class="showRecipesSubmitButton" type="submit" id="Show Recipes" value="Show">
+        <p id="topRecipes" class="lobsterFont"></p>
+
+
+    </article>
+
+    <article class="item3">
+        <p class="whiteTextColor">Click
+            <a href="index.html" style="font-family: Lobster, sans-serif"> HERE
+            </a> to navigate back to recipes</p>
+        <script src="js/form.js"></script>
+
+    </article>
+</div>
 
 </body>
 </html>

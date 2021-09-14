@@ -13,6 +13,8 @@ function checkUser() {
 
 username.addEventListener('blur', checkUser, false);
 
+
+
 document.getElementById("submitButton").onclick = function login() {
 
     if (username.value === "admin" && password.value === "admin") {
@@ -29,7 +31,6 @@ document.getElementById("submitButton").onclick = function login() {
     return false;
 
 }
-
 username.addEventListener("click", checkUser, false);
 
 

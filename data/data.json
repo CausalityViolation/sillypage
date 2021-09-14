@@ -1,12 +1,21 @@
 {
-  "Recipes": [
+  "": [
     {
-      "recipeName": "",
-      "recipeIngredients": "",
-      "recipeMethod": "",
-      "recipeServings": "",
-      "recipeDifficulty": "",
-      "recipeTime": ""
+      "Rank": " 1",
+      "Recipe Name": "Idas Kladdkaka"
+    },
+    {
+      "Rank": " 2",
+      "Recipe Name": "Freddes Fiskbullar"
+    },
+    {
+      "Rank": " 3",
+      "Recipe Name": "Sambalburgare"
+    }
+  ,
+    {
+      "Rank": " 4",
+      "Recipe Name": "Mortons Magnifika Maränger"
     }
   ]
 }

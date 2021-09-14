@@ -1,0 +1,246 @@
+.item1 {
+    grid-area: left;
+}
+
+.item2 {
+    grid-area: right;
+}
+
+.item3 {
+    grid-area: bottom;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+    'left right'
+    'left right'
+    'left right'
+    'bottom bottom';
+    padding: 0;
+
+}
+
+.grid-container > div {
+    text-align: left;
+    font-size: 20px;
+
+}
+
+.grid-container > header {
+    text-align: left;
+    padding: 10px 5px;
+    font-size: 20px;
+
+
+}
+
+.grid-container > article {
+    text-align: left;
+    padding: 10px 5px;
+    font-size: 20px;
+
+}
+
+header {
+    width: 100%;
+    height: max-content;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+#underMenu {
+
+    width: 100%;
+    height: max-content;
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    display: block;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+
+.logo {
+    color: black;
+    font-size: 2.5em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+
+}
+
+.nav ol {
+    display: flex;
+    list-style: none;
+
+}
+
+.nav ol li {
+    margin: 1em
+}
+
+body::-webkit-scrollbar {
+    width: 0.4rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #051821;
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+}
+
+.marginPaddingAuto {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Lato, sans-serif;
+    font-size: 18px;
+}
+
+
+.subPageBody {
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    font-family: Lato, sans-serif;
+    font-size: 15px;
+    height: 0;
+}
+
+.lobsterFont {
+    font-family: Lobster, sans-serif;
+}
+
+.latoFont {
+    font-family: Lato, sans-serif;
+}
+
+.titleSizeAndFont {
+    font-family: Lobster, sans-serif;
+    font-size: 50px;
+    margin: 0 auto;
+}
+
+.subTitleSizeAndFont {
+    font-family: Lato, sans-serif;
+    font-size: 25px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+form {
+    font-family: Lato, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    margin: 0 auto;
+}
+
+select {
+    width: auto;
+    height: 30px;
+    margin: 0 auto;
+}
+
+.containerImage {
+    width: 50%;
+    height: auto;
+}
+
+.containerImageFrontPage {
+    width: auto;
+    height: auto;
+    margin: 10px;
+}
+
+.formatTextToImage {
+    text-align: right;
+    margin-right: 500px;
+    border: 10px;
+}
+
+.textArea {
+    height: 200px;
+    width: 200px;
+    resize: none;
+
+}
+
+.textSizePaddingAndMarginForm {
+    margin: 0 auto;
+    padding: 5px;
+    font-size: 18px;
+
+}
+
+table {
+    border: 2px solid black;
+    border-radius: 0.8rem;
+    width: 100%;
+    height: auto;
+}
+
+li {
+    margin: 5px;
+}
+
+.submitButton {
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+    box-shadow: 0 4px 5px black;
+
+}
+
+.showRecipesSubmitButton {
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    box-shadow: 0 4px 5px black;
+
+}
+
+.showRecipesSubmitButton:hover {
+    cursor: pointer;
+
+}
+
+.submitButton:hover {
+    cursor: pointer;
+}
+
+
+.selectButton {
+    width: auto;
+    height: 30px;
+    font-size: 15px;
+
+}
+
+a:link {
+    color: #051821;
+}
+
+a:visited {
+    color: #051821;
+}
+
+a:hover {
+    color: red;
+}
+
+a:active {
+    color: blue;
+}
+
