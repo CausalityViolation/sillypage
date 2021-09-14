@@ -79,7 +79,7 @@ function change(stringObject) {
         topRec.textContent = header + stringObject;
 
 
-        document.getElementById("topRecipes").style.fontSize = "150%";
+        document.getElementById("topRecipes").style.fontSize = "130%";
         document.getElementById("topRecipes").style.background = "white";
         document.getElementById("topRecipes").style.borderRadius = "3px";
         document.getElementById("topRecipes").style.margin = "inherit";
