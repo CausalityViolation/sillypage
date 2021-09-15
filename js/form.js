@@ -38,6 +38,8 @@ document.getElementById("addRecipe").onclick = function addRecipe() {
         outputForm.setAttribute('style', 'white-space: pre;');
         outputForm.textContent = "Recipe " + recipe.Name + " Successfully Added";
         displayAddedRecipes(storedRecipes);
+
+
         document.getElementById("formReg").reset();
 
     } else if (recipe.Name === "" || recipe.Ingredients === "" || recipe.Method === "") {
@@ -57,14 +59,14 @@ document.getElementById("Show Recipes").onclick = function fetchJSON() {
 
             let fixedString = removeSymbols(data);
 
-            change(fixedString);
+            changeFavoriteRecipeButton(fixedString);
 
         });
 
     return false;
 }
 
-function change(stringObject) {
+function changeFavoriteRecipeButton(stringObject) {
 
     let elem = document.getElementById("Show Recipes");
 
@@ -86,11 +88,36 @@ function change(stringObject) {
     }
 }
 
+document.getElementById("Show Added Recipes").onclick = function changeAddedRecipesButton() {
+
+    let elem = document.getElementById("Show Added Recipes");
+
+    if (elem.value === "Hide") {
+        elem.value = "Show";
+
+        document.getElementById("addedRecipes").style.display = "none";
+
+    } else {
+        elem.value = "Hide"
+
+        displayRec.setAttribute('style', 'white-space: pre;');
+
+        let storedRecipes = JSON.parse(localStorage.getItem("recipes"));
+
+        displayRec.textContent = displayAddedRecipes(storedRecipes);
+
+
+        createBox("addedRecipes");
+
+    }
+
+}
+
 function displayAddedRecipes(storedRecipes) {
 
     displayRec.setAttribute('style', 'white-space: pre;')
     let stringObject = JSON.stringify(storedRecipes);
-    let returnString = displayRec.textContent = "Added Recipes:\r\n" + stringObject.replaceAll(/['"]/g, ' ').replaceAll(/""/g, " ")
+    let returnString = displayRec.textContent = "Recently added:\r\n" + stringObject.replaceAll(/['"]/g, ' ').replaceAll(/""/g, " ")
         .replaceAll(/,/g, "\r\n").replaceAll(/[{}]/g, "\r\n").replaceAll(/]/g, "")
         .replaceAll(/[\[\]']+/g, '');
 
