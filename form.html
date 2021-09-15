@@ -28,7 +28,7 @@
     <article class="item1">
         <p>Enter The Recipe Information In The Form Below:</p><br>
 
-        <form class="containerImageFrontPage" id="formReg">
+        <form class="containerImageFrontPage" id="formReg" name="recipeForm">
 
             <label class="textSizePaddingAndMarginForm" for="RecipeName">Recipe Name:</label><br>
             <input id="RecipeName" name="RecipeName" required="required" type="text"><br>
@@ -77,7 +77,7 @@
             <label for="servings"></label><br>
             <br>
 
-            <input class="submitButton" type="submit" value="Add Recipe">
+            <input class="submitButton" type="submit" value="Add Recipe" id="addRecipe">
         </form>
 
         <p id="output"></p>
@@ -91,6 +91,8 @@
         <p>Press this button to display the most popular recipes</p>
         <input class="showRecipesSubmitButton" type="submit" id="Show Recipes" value="Show">
         <p id="topRecipes" class="lobsterFont"></p>
+        <br>
+        <p id="addedRecipes" class="lobsterFont"></p>
 
 
     </article>

@@ -7,14 +7,14 @@ const servings = document.querySelector("#servings");
 const time = document.querySelector("#time");
 const difficulty = document.querySelector("#difficulty");
 const outputForm = document.querySelector("#output");
-const form = document.querySelector("#formReg");
 const topRec = document.getElementById("topRecipes");
+const displayRec = document.getElementById("addedRecipes");
+const form = document.getElementById("formReg");
 
 let recipes = [];
 
-function addRecipe(event) {
 
-    event.preventDefault();
+document.getElementById("addRecipe").onclick = function addRecipe() {
 
     let recipe = {
         Name: recipeName.value,
@@ -25,22 +25,27 @@ function addRecipe(event) {
         Time: time.options[difficulty.selectedIndex].text
     };
 
-    recipes.push(recipe);
+    if (recipe.Name !== "" && recipe.Ingredients !== "" && recipe.Method !== "") {
 
-    localStorage.setItem("recipes", JSON.stringify(recipes));
-    let storedRecipes = JSON.parse(localStorage.getItem("recipes"));
+        recipes.push(recipe);
 
-    //Kontrollerar i konsollen
-    console.log(storedRecipes)
+        localStorage.setItem("recipes", JSON.stringify(recipes));
+        let storedRecipes = JSON.parse(localStorage.getItem("recipes"));
 
-    outputForm.setAttribute('style', 'white-space: pre;');
-    outputForm.textContent = "Recipe " + recipe.Name + " Successfully Added";
+        //Kontrollerar i konsollen
+        console.log(storedRecipes);
 
+        outputForm.setAttribute('style', 'white-space: pre;');
+        outputForm.textContent = "Recipe " + recipe.Name + " Successfully Added";
+        displayAddedRecipes(storedRecipes);
+        document.getElementById("formReg").reset();
 
+    } else if (recipe.Name === "" || recipe.Ingredients === "" || recipe.Method === "") {
+        alert("Fill out all the fields before submitting!")
+    }
+
+    return false;
 }
-
-form.addEventListener("submit", addRecipe, false);
-
 
 document.getElementById("Show Recipes").onclick = function fetchJSON() {
 
@@ -50,11 +55,9 @@ document.getElementById("Show Recipes").onclick = function fetchJSON() {
         })
         .then((data) => {
 
-            let stringObject = JSON.stringify(data).replaceAll(/['"]/g, '').replaceAll(/""/g, " ").replaceAll(/Recipe Name/g, "")
-                .replaceAll(/,/g, "\r\n").replaceAll(/:/g, "").replaceAll(/[{}]/g, "\r\n").replaceAll(/]/g, "")
-                .replaceAll(/[\[\]']+/g, '');
+            let fixedString = removeSymbols(data);
 
-            change(stringObject);
+            change(fixedString);
 
         });
 
@@ -73,28 +76,47 @@ function change(stringObject) {
     } else {
         elem.value = "Hide"
 
-        let header = "Most Popular Recipes\r\n\r\n";
+        let header = "Most Popular Recipes\r\n";
 
         topRec.setAttribute('style', 'white-space: pre;');
         topRec.textContent = header + stringObject;
 
-
-        document.getElementById("topRecipes").style.fontSize = "130%";
-        document.getElementById("topRecipes").style.background = "white";
-        document.getElementById("topRecipes").style.borderRadius = "3px";
-        document.getElementById("topRecipes").style.margin = "inherit";
-        document.getElementById("topRecipes").style.border = "thin solid black";
-        document.getElementById("topRecipes").style.height = "auto";
-        document.getElementById("topRecipes").style.textAlign = "center";
-        document.getElementById("topRecipes").style.padding = "1.5rem";
-        document.getElementById("topRecipes").style.boxShadow = "0 4px 5px black";
+        createBox("topRecipes");
 
     }
 }
 
-/*
-function saveDataToJSON(recipe) {
-    let jsonData = JSON.stringify(recipe);
-    fs.writeFile("/data/data.json")
+function displayAddedRecipes(storedRecipes) {
+
+    displayRec.setAttribute('style', 'white-space: pre;')
+    let stringObject = JSON.stringify(storedRecipes);
+    let returnString = displayRec.textContent = "Added Recipes:\r\n" + stringObject.replaceAll(/['"]/g, ' ').replaceAll(/""/g, " ")
+        .replaceAll(/,/g, "\r\n").replaceAll(/[{}]/g, "\r\n").replaceAll(/]/g, "")
+        .replaceAll(/[\[\]']+/g, '');
+
+    createBox("addedRecipes")
+
+    return returnString;
+
 }
- */
+
+function removeSymbols(string) {
+
+    return JSON.stringify(string).replaceAll(/['"]/g, '').replaceAll(/""/g, " ").replaceAll(/Recipe Name/g, "")
+        .replaceAll(/,/g, "\r\n").replaceAll(/:/g, "").replaceAll(/[{}]/g, "\r\n").replaceAll(/]/g, "")
+        .replaceAll(/[\[\]']+/g, '');
+}
+
+function createBox(id) {
+
+    document.getElementById(id).style.fontSize = "130%";
+    document.getElementById(id).style.background = "white";
+    document.getElementById(id).style.borderRadius = "3px";
+    document.getElementById(id).style.margin = "inherit";
+    document.getElementById(id).style.border = "thin solid black";
+    document.getElementById(id).style.height = "auto";
+    document.getElementById(id).style.textAlign = "center";
+    document.getElementById(id).style.padding = "1.5rem";
+    document.getElementById(id).style.boxShadow = "0 4px 5px black";
+
+}
