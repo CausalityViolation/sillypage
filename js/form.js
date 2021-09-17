@@ -13,6 +13,13 @@ const form = document.getElementById("formReg");
 
 let recipes = [];
 
+let emptyStorage = {
+    Alert: "No recently added recipes!"
+}
+
+recipes.push(emptyStorage);
+localStorage.setItem("recipes", JSON.stringify(recipes));
+
 
 document.getElementById("addRecipe").onclick = function addRecipe() {
 
@@ -25,9 +32,10 @@ document.getElementById("addRecipe").onclick = function addRecipe() {
         Time: time.options[difficulty.selectedIndex].text
     };
 
+
     if (recipe.Name !== "" && recipe.Ingredients !== "" && recipe.Method !== "") {
 
-        recipes.push(recipe);
+        recipes.splice(0, 1, recipe);
 
         localStorage.setItem("recipes", JSON.stringify(recipes));
         let storedRecipes = JSON.parse(localStorage.getItem("recipes"));
@@ -37,7 +45,6 @@ document.getElementById("addRecipe").onclick = function addRecipe() {
 
         outputForm.setAttribute('style', 'white-space: pre;');
         outputForm.textContent = "Recipe " + recipe.Name + " Successfully Added";
-        displayAddedRecipes(storedRecipes);
 
 
         document.getElementById("formReg").reset();
@@ -117,13 +124,10 @@ function displayAddedRecipes(storedRecipes) {
 
     displayRec.setAttribute('style', 'white-space: pre;')
     let stringObject = JSON.stringify(storedRecipes);
-    let returnString = displayRec.textContent = "Recently added:\r\n" + stringObject.replaceAll(/['"]/g, ' ').replaceAll(/""/g, " ")
+    return displayRec.textContent = "Recently added:\r\n" + stringObject.replaceAll(/['"]/g, ' ').replaceAll(/""/g, " ")
         .replaceAll(/,/g, "\r\n").replaceAll(/[{}]/g, "\r\n").replaceAll(/]/g, "")
         .replaceAll(/[\[\]']+/g, '');
 
-    createBox("addedRecipes")
-
-    return returnString;
 
 }
 
@@ -136,12 +140,13 @@ function removeSymbols(string) {
 
 function createBox(id) {
 
-    document.getElementById(id).style.fontSize = "130%";
+    document.getElementById(id).style.fontSize = "110%";
     document.getElementById(id).style.background = "white";
     document.getElementById(id).style.borderRadius = "3px";
     document.getElementById(id).style.margin = "inherit";
     document.getElementById(id).style.border = "thin solid black";
     document.getElementById(id).style.height = "auto";
+    document.getElementById(id).style.width = "auto";
     document.getElementById(id).style.textAlign = "center";
     document.getElementById(id).style.padding = "1.5rem";
     document.getElementById(id).style.boxShadow = "0 4px 5px black";

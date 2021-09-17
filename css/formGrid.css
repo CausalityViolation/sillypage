@@ -18,50 +18,13 @@
     'left right'
     'bottom bottom';
     padding: 0;
-
-}
-
-.grid-container > div {
-    text-align: left;
-    font-size: 20px;
-
-}
-
-.grid-container > header {
-    text-align: left;
-    padding: 10px 5px;
-    font-size: 20px;
-
-
-}
-
-.grid-container > article {
-    text-align: left;
-    padding: 10px 5px;
-    font-size: 20px;
-
 }
 
 header {
     width: 100%;
-    height: max-content;
-    background-color: #b8c6db;
-    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
+    height: 50%;
     display: block;
     justify-content: space-around;
-    align-items: center;
-
-}
-
-#underMenu {
-
-    width: 100%;
-    height: max-content;
-    background-color: #b8c6db;
-    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
-    display: block;
-    justify-content: space-around;
-    align-items: center;
 
 }
 
@@ -80,6 +43,7 @@ header {
 .nav ol {
     display: flex;
     list-style: none;
+    padding-left: 15%;
 
 }
 
@@ -100,22 +64,12 @@ body::-webkit-scrollbar-thumb {
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
 }
 
-.marginPaddingAuto {
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: Lato, sans-serif;
-    font-size: 18px;
-}
-
 
 .subPageBody {
     background-color: #b8c6db;
     background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 74%);
     font-family: Lato, sans-serif;
-    font-size: 15px;
+    padding: 10px;
     height: 0;
 }
 
@@ -151,17 +105,6 @@ select {
     width: auto;
     height: 30px;
     margin: 0 auto;
-}
-
-.containerImage {
-    width: 50%;
-    height: auto;
-}
-
-.containerImageFrontPage {
-    width: auto;
-    height: auto;
-    margin: 10px;
 }
 
 .formatTextToImage {
@@ -242,5 +185,124 @@ a:hover {
 
 a:active {
     color: blue;
+}
+
+/*tablets*/
+@media (max-width: 768px) {
+
+
+    .logo {
+        color: red;
+        font-size: 20px;
+        padding-left: 2rem;
+    }
+
+    .nav {
+
+        align-items: center;
+    }
+
+    .nav ol {
+
+        list-style: none;
+
+    }
+
+    .nav ol li {
+        margin: fill;
+        font-size: 15px;
+    }
+
+
+    body {
+        font-size: 12px;
+    }
+
+
+    .grid-container > div {
+
+        font-size: 15px;
+        text-align: left;
+
+    }
+
+    .grid-container > header {
+
+        font-size: 15px;
+
+
+    }
+
+    .grid-container > article {
+
+        font-size: 15px;
+
+    }
+
+    .subTitleSizeAndFont {
+        font-size: 15px;
+    }
+}
+
+/*Phones and small devices*/
+
+@media (max-width: 480px) {
+
+    .logo {
+        color: blue;
+        font-size: 20px;
+        padding-left: 1.5rem;
+    }
+
+    .nav {
+        display: flex;
+        align-items: center;
+    }
+
+    .nav ol {
+        display: flex;
+        list-style: none;
+
+    }
+
+    .nav ol li {
+        margin: 0.2rem;
+        font-size: 12px ;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+
+    'left'
+    'right'
+    'bottom';
+    }
+
+
+    .grid-container > div {
+
+        font-size: 15px;
+        text-align: left;
+
+    }
+
+    .grid-container > article {
+
+        font-size: 15px;
+        padding: 0;
+
+    }
+
+    header {
+
+        height: 50%;
+
+    }
+
+
+
+
+
 }
 

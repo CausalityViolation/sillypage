@@ -1,13 +1,9 @@
-
-/*
-  ##Device = Low Resolution Tablets, Mobiles (Landscape)
-  ##Screen = B/w 481px to 767px
-*/
-
-@media(max-width: 767px) {
+/*tablets*/
+@media (max-width: 768px) {
     .logo {
         color: red;
         font-size: 20px;
+        padding-left: 2rem;
     }
 
     .nav {
@@ -61,16 +57,13 @@
     }
 }
 
-/*
-  ##Device = Most of the Smartphones Mobiles (Portrait)
-  ##Screen = B/w 320px to 479px
-*/
+/*Phones and small devices*/
 
-@media (min-width: 320px) and (max-width: 480px) {
+@media (max-width: 480px) {
 
     .logo {
         color: blue;
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .nav {
@@ -85,12 +78,31 @@
     }
 
     .nav ol li {
-        margin: 1em
+        margin: 0 10px 0 0;
+        font-size: 12px;
+        padding: 0.1rem;
     }
 
 
     body {
         font-size: 12px;
+        width: fit-content;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-areas:
+    'header'
+    'main'
+    'mudcake'
+    'mainTwo'
+    'cheese'
+    'mainThree'
+    'socker '
+    'footer'
+    'underMenu';
+        background-color: #051821;
+
     }
 
 
@@ -98,6 +110,7 @@
 
         font-size: 15px;
         text-align: left;
+        padding: 0.5rem;
 
     }
 
